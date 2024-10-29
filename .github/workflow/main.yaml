@@ -37,7 +37,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}  
           ECR_REPOSITORY: sql-repo
-          IMAGE_TAG: Darshan
+          IMAGE_TAG: v1
         run: |
           cd mysql
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
@@ -49,7 +49,7 @@ jobs:
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}  
           ECR_REPOSITORY: webapp-repo 
-          IMAGE_TAG: Darshan  
+          IMAGE_TAG: v1  
         run: |
           cd Application  
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
