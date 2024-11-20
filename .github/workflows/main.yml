@@ -37,7 +37,7 @@ jobs:
       - name: Build, Tag, and Push MySQL Docker Image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}  
-          ECR_REPOSITORY: sql-repo
+          ECR_REPOSITORY: database_docker
           IMAGE_TAG: Darshan
         run: |
           cd mysql
@@ -49,7 +49,7 @@ jobs:
       - name: Build, Tag, and Push Application Docker Image
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}  
-          ECR_REPOSITORY: webapp-repo 
+          ECR_REPOSITORY: webapp_docker 
           IMAGE_TAG: Darshan  
         run: |
           cd Application  
