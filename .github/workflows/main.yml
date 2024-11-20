@@ -4,7 +4,7 @@ name: Build and Push Docker Images
 #commit
 on:
   push:
-    branches: [ Darshan ] 
+    branches: [ main ] 
 
 jobs:
   build:
